@@ -20,3 +20,10 @@ test(
         expect(add("4,5")).toBe(9);
     }
 )
+
+test(
+    "Multiple numbers sperated by comma return its sum",
+    ()=>{
+        expect(add("4,5,5,2,2")).toBe(18);
+    }
+)
