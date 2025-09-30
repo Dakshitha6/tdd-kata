@@ -1,6 +1,11 @@
 function add(input){
     if(input==="")return 0;
-    const regex=/,|\n/;
+    let regex=/,|\n/;
+    if(input.startsWith("//")){
+        const parts=input.split("\n");
+        regex=parts[0].slice(2);
+        input=parts[1];
+    }
     const numbers=input.split(regex).map((num)=>Number(num));
     return numbers.reduce((acc,curr)=>acc+curr,0);
 }
