@@ -13,3 +13,10 @@ test(
         expect(add("5")).toBe(5);
     }
 )
+
+test(
+    "Two numbers return its sum",
+    ()=>{
+        expect(add("4,5")).toBe(9);
+    }
+)
