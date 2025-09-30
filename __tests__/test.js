@@ -27,3 +27,10 @@ test(
         expect(add("4,5,5,2,2")).toBe(18);
     }
 )
+
+test(
+    "Newlines as separators, return its sum",
+    ()=>{
+        expect(add("1\n2,3")).toBe(6);
+    }
+)
